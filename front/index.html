@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StarBits</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/">
+        <img src="assets/starbits.jpeg" alt="NASA Space Apps Challenge Logo" />
+      </a>
+      <div class="header-content">
+        <h1>Welcome to StarBits</h1>
+      </div>
+
+      <nav class="nav" id="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="info.html">Contaminants</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-controls="main-nav"
+        aria-expanded="false"
+        aria-label="Toggle menu"
+      >
+        <span class="burger"></span>
+      </button>
+    </header>
+    <main>
+      <section id="home">About StarBits</section>
+
+      <div class="container">
+        <section class="map-section">
+          <div class="map-controls">
+            <h4>Select Region</h4>
+            <div class="button-grid">
+              <button class="map-btn">Zone 1</button>
+              <button class="map-btn">Zone 2</button>
+              <button class="map-btn">Zone 3</button>
+              <button class="map-btn">Zone 4</button>
+              <button class="map-btn">Zone 5</button>
+              <button class="map-btn">Zone 6</button>
+              <button class="map-btn">Zone 7</button>
+              <button class="map-btn">Zone 8</button>
+              <button class="map-btn">Zone 9</button>
+              <button class="map-btn">Zone 10</button>
+            </div>
+          </div>
+          <img
+            src="assets/tempo_map.png"
+            alt="Air Quality Map"
+            class="map-img"
+          />
+          <p class="updated">Updated 10:00 pm EDT, Oct 4</p>
+        </section>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <section class="air-quality">
+            <h1>Current Air Quality</h1>
+
+            <!-- Contaminante principal -->
+            <div class="pollutant primary">
+              <div class="pollutant-header">
+                <strong>Primary Pollutant</strong>
+                <p>This pollutant currently has the highest AQI in the area.</p>
+              </div>
+
+              <details open>
+                <summary>
+                  <span class="label">PM2.5</span>
+                  <span class="aqi yellow">61</span>
+                  <span class="level">Moderate</span>
+                </summary>
+                <p class="description">
+                  If you are <strong>unusually sensitive</strong> to particle
+                  pollution, consider reducing your activity level or shortening
+                  the time you are active outdoors.
+                </p>
+              </details>
+            </div>
+
+            <!-- Otros contaminantes -->
+            <div class="pollutant">
+              <details>
+                <summary>
+                  <span class="label">OZONE</span>
+                  <span class="aqi green">40</span>
+                  <span class="level">Good</span>
+                </summary>
+                <p class="description">Enjoy your outdoor activities.</p>
+              </details>
+            </div>
+
+            <div class="pollutant">
+              <details>
+                <summary>
+                  <span class="label">PM10</span>
+                  <span class="aqi green">13</span>
+                  <span class="level">Good</span>
+                </summary>
+                <p class="description">Enjoy your outdoor activities.</p>
+              </details>
+            </div>
+          </section>
+        </div>
+        <!-- Content Column -->
+        <div class="col-lg-6 mb-4">
+          <!-- Color Code Air Quality -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">
+                Air Quality Color Code
+              </h6>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-6 mb-4">
+                  <div class="card bg-good_no2 text-black shadow">
+                    <div class="card-body font-weight-bold">
+                      Good
+                      <div class="text-black-50 small">0-50</div>
+                      <button class="boton-js" onclick="mostrarMensajeGood()">Ver detalles</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                  <div class="card bg-moderate_no2 text-black shadow">
+                    <div class="card-body font-weight-bold">
+                      Moderate
+                      <div class="text-black-50 small">51-100</div>
+                      <button class="boton-js" onclick="mostrarMensajeModerate()">Ver detalles</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                  <div class="card bg-usg_no2 text-black shadow">
+                    <div class="card-body font-weight-bold">
+                      Unhealthy for Sensitive Groups (USG)
+                      <div class="text-black-50 small">101-150</div>
+                      <button class="boton-js" onclick="mostrarMensajeUSG()">Ver detalles</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                  <div class="card bg-unhealthy_no2 text-black shadow">
+                    <div class="card-body font-weight-bold">
+                      Unhealthy
+                      <div class="text-black-50 small">151-200</div>
+                      <button class="boton-js" onclick="mostrarMensajeUnhealthy()">Ver detalles</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                  <div class="card bg-vunhealthy_no2 text-black shadow">
+                    <div class="card-body font-weight-bold">
+                      Very Unhealthy
+                      <div class="text-black-50 small">201 - 300</div>
+                      <button class="boton-js" onclick="mostrarMensajeUnhealthy()">Ver detalles</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                  <div class="card bg-hazardous_no2 text-black shadow">
+                    <div class="card-body font-weight-bold">
+                      Hazardous
+                      <div class="text-black-50 small">301+</div>
+                      <button class="boton-js" onclick="mostrarVeryUnhealthy()">Ver detalles</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>
+          If you have any questions or would like to learn more about StarBits,
+          please reach out to any team member
+          <li><a href="mailto:diego.peralta52@uabc.edu.mx">Diego Sebastian Peralta Martinez</a></li>
+          <li><a href="mailto:iyari.estrada@uabc.edu.mx">Iyari Galindo Estrada</a></li>
+          <li><a href="mailto:nahomi.leal@uabc.edu.mx">Nahomi Leal Rodriguez</a></li>
+          <li><a href="mailto:salma.arechiga@uabc.edu.mx">Salma Sofia Arechiga Lopez</a></li>
+          <li><a href="mailto:sandi.roblero@uabc.edu.mx">Sandi Guilma Roblero Valenzuela</a></li>
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

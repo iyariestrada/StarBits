@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StarBits</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+  
+    <header class="site-header">
+      <a class="brand" href="/">
+        <img src="assets/starbits.jpeg" alt="NASA Space Apps Challenge Logo" />
+      </a>
+      <div class="header-content">
+        <h1>Welcome to StarBits</h1>
+      </div>
+
+      <nav class="nav" id="main-nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="info.html">Contaminants</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-controls="main-nav"
+        aria-expanded="false"
+        aria-label="Toggle menu"
+      >
+        <span class="burger"></span>
+      </button>
+    </header>
+     
+    <main>
+      <section id="about"><h2>Primary pollutants</h2></section>
+   
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+         
+            <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h4 class="m-0 font-weight-bold text-primary">Particulate matter (PM2.5 y PM10)</h4>
+            </div>
+            <div class="card-body">
+              <div class="text-center">
+                <img
+                  class="img-fluid px-3 px-sm-4 mt-3 mb-4"
+                  style="width: 25rem"
+                  src="assets/PM_medidas.jpeg"
+                  alt="..."
+                />
+              </div>
+              <p class="content">
+                  Solid and liquid particles suspended in the air.
+                  Source: Mixture of solid and liquid particles in the air, such as dust, soot, smoke, and metals, originating from cars, factories, and wood burning. 
+              </p>
+            </div>
+          </div>
+
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h4 class="m-0 font-weight-bold text-primary">Nitrogen Dioxide (NO₂)</h4>
+            </div>
+            <div class="card-body">
+              <div class="text-center">
+                <img
+                  class="img-fluid px-3 px-sm-4 mt-3 mb-4"
+                  style="width: 25rem"
+                  src="assets/nitrogen_dioxide.jpg"
+                  alt="..."
+                />
+              </div>
+              <p> 
+                A gas that can irritate the respiratory system, especially in children, and affect lung function. 
+                Sources: Combustion of fuels in vehicles, power plants, and industrial facilities. 
+              </p>
+            </div>
+          </div>
+
+           <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h4 class="m-0 font-weight-bold text-primary">Formaldehyde (CH₂O / HCHO)</h4>
+            </div>
+            <div class="card-body">
+              <div class="text-center">
+                 <img
+                  class="img-fluid px-3 px-sm-4 mt-3 mb-4"
+                  style="width: 25rem"
+                  src="assets/CH20.png"
+                  alt="..."
+                 />
+              </div>
+              <p>
+                A gas that can be irritating and is found in the air, a colorless gas, may seem irrelevant to many, but its presence in our daily lives poses significant health risks. 
+                Source: An essential component of the manufacturing industry, commonly used in the production of various materials, from plastics and textiles to furniture and household products.  
+               </p>
+            </div>
+          </div>
+
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h4 class="m-0 font-weight-bold text-primary">Aerosol Index(AI)</h4>
+            </div>
+            <div class="card-body">
+               <div class="text-center">
+                <img
+                  class="img-fluid px-3 px-sm-4 mt-3 mb-4"
+                  style="width: 25rem"
+                  src="assets/aerosoles.jpg"
+                  alt="..."
+                />
+              </div>
+              <p>
+                Refers to the measurement of the amount of particles and aerosols suspended in the atmosphere, which affect visibility and health. 
+                Source: Suspended particles (dust, soot, smoke) come from biomass burning, vehicle traffic, and industrial processes.  
+              </p>
+            </div>
+          </div>
+
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h4 class="m-0 font-weight-bold text-primary">Ozono (O₃)</h4>
+            </div>
+            <div class="card-body">
+                <div class="text-center">
+                    <img
+                    class="img-fluid px-3 px-sm-4 mt-3 mb-4"
+                    style="width: 25rem"
+                    src="assets/ozone_ES.png"
+                    alt="..."
+                    />
+                <p>
+                  A gas that can irritate the respiratory system and worsen lung diseases.
+                  It comes from: Total Volatile Organic Compounds (TVOC) from various sources, mainly solvents and paints, industries, road traffic (mainly two-wheeled vehicles), and plants.
+                </p>
+            </div>
+
+
+        </div>
+      </div>
+
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>
+          If you have any questions or would like to learn more about StarBits,
+          please reach out to any team member
+          <li><a href="mailto:diego.peralta52@uabc.edu.mx">Diego Sebastian Peralta Martinez</a></li>
+          <li><a href="mailto:iyari.estrada@uabc.edu.mx">Iyari Galindo Estrada</a></li>
+          <li><a href="mailto:nahomi.leal@uabc.edu.mx">Nahomi Leal Rodriguez</a></li>
+          <li><a href="mailto:salma.arechiga@uabc.edu.mx">Salma Sofia Arechiga Lopez</a></li>
+          <li><a href="mailto:sandi.roblero@uabc.edu.mx">Sandi Guilma Roblero Valenzuela</a></li>
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
